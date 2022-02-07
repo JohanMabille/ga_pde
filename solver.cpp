@@ -105,6 +105,8 @@ namespace dauphine
         m_trans(dim-1,dim-1) = 1-(1-m_theta)*b;        
     }
 
+    // A, b, c and d should be passed by const reference
+    // dim and j should be passed by value
     void solver::init_matrice_2(matrix& m_trans,const int& dim, const int& j,
                                 std::vector<double>& a,
                                 std::vector<double>& b,

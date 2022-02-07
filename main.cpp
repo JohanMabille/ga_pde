@@ -11,8 +11,9 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <math.h> 
-
+#include <math.h>
+// for strcmp
+#include <cstring>
 
 // Guidelines:
 //
@@ -144,7 +145,10 @@ int main(int argc, const char * argv[])
     std::cout << solv << std::endl;
 
     // Results
-    double cf  =  dauphine::bs_price(spot,strike,v0,maturity,is_call) ;
+    // Use the closed form with the correct parameter to be able to
+    // compare with your PDE impementation
+    double r = rate.get_rates()[0];
+    double cf  =  dauphine::bs_price(spot*std::exp(maturity*r),strike,v0,maturity,is_call)*std::exp(-maturity*r) ;
     std::cout << "Closed form price : " << cf << " (with assumption r=0)" << std::endl;
 
     dauphine::matrix result(ndx,ndt);

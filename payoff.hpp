@@ -11,6 +11,7 @@ class payoff
 {
     public :
         payoff();
+        // Missing virtual destructor and deletion of copy and move semantics
         virtual double operator() (const double& spot) const = 0;
         virtual std::vector<double> operator() (const std::vector<double>& spot) const = 0;
 };

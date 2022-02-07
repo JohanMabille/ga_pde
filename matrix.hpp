@@ -48,6 +48,9 @@ class matrix
 
     std::vector<double> operator*(const matrix& lhs, const std::vector<double>& rhs);
 
+    // It is usually discouraged to overload mathematic operators for the classes of
+    // the STL. ON of the reason is that you cannot achieve consistency because computed
+    // assignment operators cannot be defined.
     std::vector<double> operator*(const double& scal, const std::vector<double>& rhs);
     std::vector<double> operator*(const std::vector<double>& lhs, const double& scal);
 

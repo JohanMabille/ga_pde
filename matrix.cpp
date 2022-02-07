@@ -1,4 +1,5 @@
 #include "matrix.hpp"
+#include <algorithm>
 #include <math.h>
 #include <string>
 #include <iomanip>

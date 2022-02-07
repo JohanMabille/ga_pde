@@ -10,6 +10,8 @@ class boundary
 {
     public:
         boundary();
+        // Missing virtual destructor and deletion of
+        // copy and move semantics
         double get_upper_b() const;
         double get_lower_b() const;
 
