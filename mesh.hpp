@@ -12,6 +12,7 @@ class mesh{
     
     mesh(double spot, double T, int n_dx, int n_dt, double vol);
 
+    // Return by const reference for performance
     std::vector<double> get_xaxis() const;
     double get_ndx() const;
     double get_ndt() const;

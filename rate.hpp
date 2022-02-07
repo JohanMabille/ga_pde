@@ -15,8 +15,10 @@ namespace dauphine
             rate(double r);
             rate(std::vector<double> r);
             rate(double r, dauphine::mesh msh,  double alpha);
+            // Return a const reference for performance
             std::vector<double> get_rates() const;
             
+        // private ould be better
         protected:
             std::vector<double> p_rate;
     };

@@ -11,6 +11,7 @@
 
 namespace dauphine
 {
+    // int and double can be passed by value
     double delta(const matrix& result, const std::vector<double>& x_axis, const int& index);
     double gamma(const matrix& result, const std::vector<double>& x_axis);
     double vega(const matrix& result, solver& solv, const volatility& vol, const rate& rate, const int& ndx);

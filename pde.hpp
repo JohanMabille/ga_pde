@@ -18,6 +18,13 @@ namespace dauphine
     {
         public :
             pde_european(const volatility& vol, const rate& rate);
+            // Missing virtual destructor and deletion of copy and
+            // move semantics
+
+
+            // return by const ref for performances
+            // These methods should be virtual and should
+            // redefine pure virtual methods from the mother class
             std::vector<double> get_coeff_a() const;
             std::vector<double> get_coeff_b() const;
             std::vector<double> get_coeff_c() const;
